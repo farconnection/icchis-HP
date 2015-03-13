@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Google AJAX Feed API 複数ブログの場合</title>
+<meta name="keywords" content="Google,RSS,Feed,API" />
+<meta name="description" content="Google AJAX Feed APIのサンプル" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+
+// 初期設定
+var disp_entry_count = 8;       //表示させたい記事の数
+
+// RSS URL
+var site = new Array();
+
+site[0] = {
+    title:'GIZUMODO',
+    url:'http://feeds.gizmodo.jp/rss/gizmodo/index.xml',
+    disp_entry:2        // 取得する記事の数
+};
+
+site[1] = {
+    title:'Gigazin',
+    url:'http://feed.rssad.jp/rss/gigazine/rss_2.0',
+    disp_entry:3        // 取得する記事の数
+};
+
+site[2] = {
+    title:'ウェブソク',
+    url:'http://news.7zz.jp/feed',
+    disp_entry:5        // 取得する記事の数
+};
+
+var channel = new Array();
+var entry = new Array();
+var entries = new Array();
+var Feed = "";
+
+google.load("feeds", "1");
+function init() {
+
+    var site_count = 0;
+
+    for (var i=0; i<site.length; i++){
+
+        // 読み込むRSSを設定
+        var feed = new google.feeds.Feed(site[i]['url']);
+        feed.setNumEntries(site[i]['disp_entry'])
+        feed.load(function(rss) {
+            if (!rss.error) {
+
+                // RSSからサイトの情報を配列に格納
+                channel['title'] = rss.feed.title;
+                channel['link'] = rss.feed.link;
+                channel['favicon'] = "http://favicon.hatena.ne.jp/?url=" + channel['link'];
+                channel['description'] = rss.feed.description;
+                channel['author'] = rss.feed.author;
+
+                // RSSから記事の情報を配列に格納
+                for (var j=0; j<rss.feed.entries.length; j++){
+
+                    var feed_entry = rss.feed.entries[j];
+                    var entry = {
+                        site_title : channel['title'],
+                        site_link : channel['link'],
+                        site_favicon : channel['favicon'],
+                        title : feed_entry.title,
+                        link : feed_entry.link,
+                        content : feed_entry.content,
+                        contentSnippet : feed_entry.contentSnippet,
+                        publishedDate : feed_entry.publishedDate
+                    };
+
+                    var date = new Date(entry['publishedDate']);
+                    entry['time'] = date.getTime();
+                    var yy = date.getYear();
+                    var mm = date.getMonth() + 1;
+                    var dd = date.getDate();
+                    if (yy < 2000) { yy += 1900; }
+                    if (mm < 10) { mm = "0" + mm; }
+                    if (dd < 10) { dd = "0" + dd; }
+                    entry['date'] = yy + "年" + mm + "月" + dd + "日";
+
+                    entry['img'] = entry['content'].match(/src="(.*?)"/igm);
+
+                    if (entry['img'] != null) {
+                        for (var k=0; k<entry['img'].length; k++){
+                            entry['img'][k] = entry['img'][k].replace(/src=/ig, "");
+                            entry['img'][k] = entry['img'][k].replace(/"/ig, "");
+                        }
+                    }
+                    entries.push(entry);
+                }
+            }
+            site_count++;
+            if (site.length == site_count){ disp(); }
+        });
+    }
+}
+
+function disp() {
+
+    //日付順に並べ替え
+    entries.sort (function (b1, b2) { return b1.time < b2.time ? 1 : -1; } );
+
+    // 記事をhtmlに整形
+    for (var l=0; l<disp_entry_count; l++){
+        if (entries.length < l+1){ break; }
+
+        if (entries[l]['img'] != null) { Feed += '<img width="100" src="' + entries[l]['img'][0] + '">'; }
+        Feed += '<h2><img src="' + entries[l]['site_favicon'] + '">'
+                    + ''
+                    + '<a href="' + entries[l]['site_link'] + '">' + entries[l]['site_title'] + '</a></h2>'
+                    + entries[l]['date']
+                    + '<h3>'
+                    + '<a href="'+ entries[l]['link'] + '">' + entries[l]['title'] + '</a>'
+                    + '</h3>'
+                    + '<p>contentSnippet:' + entries[l]['contentSnippet'].substr(0, 100) + '……</p>';
+    }
+    // 表示するタグに追加
+    $('#topics').append( Feed );
+}
+
+google.setOnLoadCallback(init);
+
+</script>
+</head>
+<body>
+<h1>Google AJAX Feed API　複数ブログの場合</h1>
+<!-- RSSを表示するタグ -->
+<div id="topics"></div>
+</body>
+</html>

@@ -1,0 +1,394 @@
+
+@media screen and (min-device-width: 554px) and (max-device-width: 3024px) {
+	body {
+		font-size: 90%;
+	}
+	header{
+		text-align: center;
+		margin-top:30px;
+	}
+	.container {
+		width: 100%;
+		height: 100%;
+		/*display: none;*/
+	}
+	h1{
+		color: #fff;
+		/*font-family: 'Sigmar One', cursive;*/
+		font-family: 'Black Ops One', cursive;
+		font-size: 55px;
+		letter-spacing: 5px;
+		margin-bottom: 0px;
+		text-shadow: 1px 3px 1px #CCC,2px 3px 1px #CCC;
+	}
+	.l_top{
+		font-family: 'Black Ops One', cursive;
+		/*position: absolute;*/
+		top: 30%;
+		left: 30%;
+		font-size: 40px;
+	/*	-moz-transform: rotate(-15deg);
+		-webkit-transform: rotate(-15deg);
+		-o-transform: rotate(-15deg);
+		-ms-transform: rotate(-15deg);*/
+	}
+	.r_top{
+		font-family: 'Black Ops One', cursive;
+		/*position: absolute;*/
+		top: 30%;
+		right: 30%;
+		font-size: 40px;
+/*		-moz-transform: rotate(15deg);
+		-webkit-transform: rotate(15deg);
+		-o-transform: rotate(15deg);
+		-ms-transform: rotate(15deg);*/
+	}
+	h1 p{
+		color: #fff;
+		/*font-family: 'Sigmar One', cursive;*/
+		font-family: 'Black Ops One', cursive;
+		font-size: 30px;
+		margin-bottom: 0px;
+		text-shadow: 1px 1px 1px #AAA;
+	}
+	h3{
+		color:#FFF !important;
+		float: left;
+		font-family: 'Black Ops One', cursive;
+		font-size: 30px;
+		letter-spacing: 5px;
+		margin: -10px 0 0 100px;
+		text-shadow: 1px 3px 1px #CCC,2px 3px 1px #CCC;
+	}
+	h2{
+		color:rgba(0,0,0,0.3) !important;
+		clear: both;
+		font-family: 'Orbitron', sans-serif;
+		font-size: 48px;
+		font-weight: 700;
+		width: 300px;
+		margin: 20px auto;
+		border-bottom: 3px solid rgba(0,0,0,0.3);
+	}
+	h4{
+		font-family: "ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN";
+		font-size: 28px;
+		font-weight: 800;
+		margin:15px 10px;
+		text-shadow: 1px 1px 1px #333;
+		text-shadow: 1px 1px 3px rgb(33, 72, 114);
+	}
+	.home_nav {
+		font-family: 'Orbitron', sans-serif;
+		padding: 2em 0 3em;
+	}
+	.home_nav a {
+		width: 240px;
+		height: auto;
+		display: inline-block;
+		margin: 20px 10px;
+		padding: 20px 0;
+		outline: none;
+		border: 3px solid rgba(0,0,0,0.3);
+		color: rgba(0,0,0,0.3);
+		text-decoration: none;
+		font-weight: 700;
+		opacity: 1;
+		-webkit-transition: all 0.7s;
+		transition: all 0.7s;
+		font-size:140%;
+		overflow: hidden;
+	}
+	.home_nav img{
+		margin-top:15px;
+		width: 190px;
+		-webkit-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	.home_nav img:hover{
+		opacity: 0.5;
+	}
+
+	section#content{
+		text-align: center;
+		/*float: none;*/
+		padding:20px 50px;
+		width: 1000px;
+		margin: 0 auto 30px;
+		border: 3px solid rgba(0,0,0,0.3);
+		/*min-height: 1em;*/
+	    /*display: inline-table;*/
+	}
+	section#content:after{
+		content: "";
+	    display: block;
+	    clear: both;
+	    height: 1px;
+	    overflow: hidden;
+	}
+	article{
+		margin: 10px 0;
+	}
+	.c_text{
+		float: left;
+		width: 405px;
+		height: auto;
+		background: rgb(63, 152, 187);
+		text-align: left;
+		margin: 20px;
+		padding: 30px 20px;
+		/*border: 3px solid rgba(0,0,0,0.3);*/
+		box-shadow: 0px -1px 8px #FFFFFF;
+	}
+	.c_text p{
+		margin:10px 15px;
+		line-height: 27px;
+		letter-spacing: 1px;
+	}
+	.c_text img{
+		margin-top: 10px;
+		width: 350px;
+		-webkit-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+	.c_text img:hover{
+		opacity: 0.6;
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+	}
+	.text{
+		text-align: center;
+	}
+	.text p{
+		padding: 20px;
+		font-size: 21px;
+	}
+	.text p.comment{
+		font-size: 17px;
+	}
+	.form1{
+		margin: 0 auto;
+	}
+	.mailform{
+		margin: 0px auto 30px;
+		text-align: left;
+		width: 475px;
+		height: 200px;
+		border: 3px solid rgba(0,0,0,0.3);
+		padding: 10px;
+		color: #5E6672;
+	}
+	#mail_c{
+		font-family: "ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro";
+		margin: 0 auto;
+		width: 200px;
+		height: 50px;
+		background: rgb(164, 238, 226);
+		padding: 10px;
+		border: none;
+		border-radius: 30px;
+		font-size: 20px;
+		font-weight: 600;
+		color: rgb(57, 94, 128);
+		-webkit-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+	#mail_c:hover{
+		background: rgb(57, 94, 128);
+		color: rgb(164, 238, 226);
+	}
+	span{
+		font-size: 120%;
+	}
+}
+
+@media screen and (max-width: 553px) {
+	body{
+		font-size: 83%;
+	}
+	header{
+		text-align: center;
+		margin-top:60px;
+	}
+	.container {
+		width: 100%;
+		height: 100%;
+		/*display: none;*/
+	}
+	.codrops-header {
+		position: relative;
+		margin: 0 auto;
+		height: auto;
+		max-width: 100%;
+	}
+	h1{
+		color: #fff;
+		/*font-family: 'Sigmar One', cursive;*/
+		font-family: 'Black Ops One', cursive;
+		font-size: 30px;
+		letter-spacing: 5px;
+		margin-bottom: 0px;
+		text-shadow: 1px 3px 1px #CCC,2px 3px 1px #CCC;
+	}
+	h1 p{
+		color: #fff;
+		/* font-family: 'Sigmar One', cursive; */
+		font-family: 'Black Ops One', cursive;
+		font-size: 17px;
+		margin-bottom: 7px;
+		letter-spacing: 4px;
+		text-shadow: 1px 1px 1px #AAA;
+	}
+	h3{
+		color:#FFF !important;
+		float: left;
+		font-family: 'Black Ops One', cursive;
+		font-size: 27px;
+		letter-spacing: 5px;
+		margin: -40px 0 -20px 100px;
+		text-shadow: 1px 3px 1px #CCC,2px 3px 1px #CCC;
+	}
+	h2{
+		color:rgba(0,0,0,0.3) !important;
+		clear: both;
+		font-family: 'Orbitron', sans-serif;
+		font-size: 48px;
+		font-weight: 700;
+		width: 300px;
+		margin: 20px auto;
+		border-bottom: 3px solid rgba(0,0,0,0.3);
+	}
+	h4{
+		font-family: "ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN";
+		font-size: 28px;
+		font-weight: 800;
+		margin:15px 10px;
+		text-shadow: 1px 1px 1px #333;
+		text-shadow: 1px 1px 3px rgb(33, 72, 114);
+	}
+	.home_nav {
+		font-family: 'Orbitron', sans-serif;
+		padding: 2em 0 3em;
+		text-align: center;
+	}
+	.home_nav a{
+		width: 45%;
+		height: auto;
+		display: inline-block;
+		outline: none;
+		border: 3px solid rgba(0,0,0,0.3);
+		color: rgba(0,0,0,0.3);
+		text-decoration: none;
+		font-weight: 700;
+		opacity: 1;
+		-webkit-transition: all 0.7s;
+		transition: all 0.7s;
+		font-size:140%;
+		margin: 10px 0;
+		padding: 10px 0;
+	}
+	.home_nav img{
+		margin-top:15px;
+		width: 80%;
+		-webkit-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	.home_nav img:hover{
+		opacity: 0.5;
+	}
+	section#content{
+		width: 100%;
+		padding: 20px 5px;
+	}
+	article{
+		width: 100%;
+		margin: 10px 0;
+	}
+	.c_text{
+		float: left;
+		width: 93%;
+		height: auto;
+		background: rgb(63, 152, 187);
+		text-align: left;
+		margin: 20px 10px;
+		padding: 20px 10px;
+		/*border: 3px solid rgba(0,0,0,0.3);*/
+		box-shadow: 0px -1px 8px #FFFFFF;
+	}
+	.c_text p{
+		margin:10px 5px;
+		line-height: 27px;
+		letter-spacing: 1px;
+	}
+	.c_text img{
+		margin-top: 10px;
+		width: 95%;
+		-webkit-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+	.c_text img:hover{
+		opacity: 0.6;
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+	}
+	.text{
+		text-align: center;
+		width: 95%;
+		border: 3px solid rgba(0,0,0,0.3);
+		margin: 0 auto;
+		padding:10px 10px 60px;
+	}
+	.text p{
+		padding: 20px;
+		font-size: 21px;
+	}
+	.form1{
+		margin: 0 auto;
+		text-align: center;
+	}
+	.mailform{
+		margin: 30px auto;
+		text-align: left;
+		width: 100%;
+	}
+		.text{
+		text-align: center;
+	}
+	.text p{
+		padding: 20px 5px;
+		font-size: 21px;
+	}
+	.text p.comment{
+		font-size: 17px;
+	}
+	.form1{
+		margin: 0 auto;
+	}
+	.mailform{
+		margin: 0px auto 30px;
+		text-align: left;
+		width: 95%;
+		height: 200px;
+		border: 3px solid rgba(0,0,0,0.3);
+		padding: 10px 5px;
+		color: #5E6672;
+	}
+	#mail_c{
+		font-family: "ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro";
+		margin: 0 auto;
+		width: 200px;
+		height: 50px;
+		background: rgb(164, 238, 226);
+		padding: 10px;
+		border: none;
+		border-radius: 30px;
+		font-size: 20px;
+		font-weight: 600;
+		color: rgb(57, 94, 128);
+		-webkit-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+	span{
+		font-size: 120%;
+	}
+}

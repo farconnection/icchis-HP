@@ -1,0 +1,782 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: Small - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800);
+
+body {
+  font-family: 'Open Sans',sans-serif;
+  background: #f5f6f7;
+  color: #f5f6f7;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 300; }
+
+h1{
+  font-family: "Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+  line-height: 47px;
+}
+
+h2{
+  font-size: 60px;
+  margin-top: -20px;
+  padding-top:90px;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+
+  /* =========================
+
+		GENERAL STYLES
+
+   =========================*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none; }
+
+a:link,
+a:visited,
+a:active {
+  font-weight: 600;
+  color: #f5f6f7;
+  text-decoration: none; }
+  a:link:hover,
+  a:visited:hover,
+  a:active:hover {
+    color: #e1e1e1;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s; }
+
+
+.nav {
+  position: fixed;
+  width: 30px;
+  height: 84px;
+  z-index: 100;
+  right: 0;
+  top: 50%;
+  margin-top: -42px; }
+  .nav a {
+    text-indent: -9999px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: rgba(245, 246, 247, 0.4);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s; }
+    .nav a:hover {
+      background: #f5f6f7;
+      -webkit-transition: background 1s;
+      -moz-transition: background 1s;
+      -ms-transition: background 1s;
+      -o-transition: background 1s;
+      transition: background 1s; }
+
+.mb-7 {
+  margin-bottom: 70px; }
+
+.centered {
+	text-align: center;
+}
+
+/* =========================
+
+		SECTION STYLES
+
+   =========================*/
+#hero,
+#work,
+#networks {
+  position: relative; }
+
+.hero-block,
+.footer-block {
+  height: 600px;
+  width: 100%;
+  position: relative;
+  top: 0%;
+  margin: 0;
+  padding-top: 20px; }
+
+.hero-image {
+  width: auto;
+  height: auto; }
+
+.footer-block {
+  height: 180px;
+  margin-top: -90px; }
+
+#hero{
+  background: #1abc9c; }
+#work {
+  background: #3498db; }
+
+#networks {
+  background: #474e5d; }
+
+.down-arrow {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  margin-left: -12px;
+  width: 25px;
+  height: 14px;
+  background: url("../img/arrow.png") no-repeat; }
+
+/* =========================
+
+			WORK
+
+   =========================*/
+
+#title2{
+  margin: 0 auto !important;
+}
+
+#work .showcase {
+  width: 100%;
+  padding: 0px;
+
+   }
+
+.showcase-tiles {
+  padding-top: 0px;
+  margin-top: 0px;
+  display: table-row; }
+
+.showcase-info {
+  /*display: table-row;*/ }
+
+.showcase-info {
+  text-align: center; }
+
+/* =========================
+
+		DRIBBBLE FEED
+
+   =========================*/
+.d-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding-top: 25%;
+  line-height: 20px;
+  background: rgba(231, 76, 60, 0.9); }
+  .d-hover p {
+    display: block !important;
+    z-index: 500;
+    margin-top: 25px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300; }
+
+ul.slides {
+  line-height: 0px;
+  padding: 0px; }
+
+ul.slides li {
+display: inline-block;
+width: 25%; }
+
+
+ul.slides li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+ul.slides li a:hover .d-hover {
+  display: block; }
+
+ul.slides li a img {
+	width: 100%; }
+
+ul.slides li a p {
+	display: none; }
+
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+}
+
+@media only screen and (max-width: 1700px) {
+      ul.slides li {
+        width: 33%; }
+      .c_p3 a{
+        font-size: 27px;
+        font-weight: 800;
+        color: #FDBC4D;
+      }
+      #menu{
+        list-style: none;
+        text-align: center;
+        padding: 70px 0 120px;
+      }
+      #menu li{
+        font-family:"Lucida Grande","segoe UI","ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN",Meiryo,Arial,sans-serif;
+        display: inline-block;
+        width: 190px;
+        height: 190px;
+        padding: 80px 10px 0;
+        margin: 0 10px 200px;
+        color: #fff;
+        font-weight: 800;
+        font-size: 50px;
+        vertical-align: middle;
+        overflow: visible;
+        border-radius: 100px;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+      }
+      #menu li#to_aim{
+        background-color: #FB7156;
+      }
+      #menu li#to_action{
+        background-color: #FCC24C;
+        margin: 200px -30px 0 30px;
+      }
+      #menu li#to_member{
+        background-color: #5ADD97;
+        margin: 200px 30px 0 -30px;
+      }
+      #menu li#to_aim:hover{
+        background-color: #fff;
+        color: #FB7156;
+      }
+      #menu li#to_action:hover{
+        background-color: #fff;
+        color: #FCC24C;
+      }
+      #menu li#to_member:hover{
+        background-color: #fff;
+        color: #5ADD97;
+      }
+      .c_text {
+        padding: 40px 10px ;
+        color: #fff;
+        width: 700px;
+        margin: 0 auto;
+        overflow: scroll;
+        }
+      .production {
+        float: left;
+        width: 400px;
+        border: 2px solid #fff;
+        margin: 50px;
+        color: #FFF;
+        padding: 30px 20px;
+      }
+      .production img{
+        width: 280px;
+        height: auto;
+        margin: 10px 0;
+      }
+      .bg1,.bg2,.bg3,.bg4,.bg5,.bg6,.bg7,.bg8,.bg9,.bg10,.bg11,.bg12{
+        position: absolute;
+        font-size: 90px;
+        font-weight: 800;
+        z-index: 1;
+        color: #ddd;
+        -webkit-animation: opacity 5s infinite; /* Chrome, Safari, Opera */
+        animation: opacity 5s infinite;
+      }
+      .bg1{
+        top: 27%;
+        left: 16%;
+        transform: rotateX(-20deg);
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        color: #302D2D;
+      }
+      .bg2{
+        top: 30%;
+        right: 12%;
+        transform: rotateX(40deg);
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-50deg);
+        color: rgb(59, 59, 245);
+      }
+      .bg3{
+        top: 79%;
+        right: 19%;
+        transform: rotateX(20deg);
+        -webkit-transform: rotate(20deg);
+        color: aqua;
+      }
+      .bg4{
+        top: 70%;
+        left: 20%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(248, 61, 61);
+      }
+      .bg5{
+        top: 120%;
+        right: 20%;
+        transform: rotateX(33deg);
+        -webkit-transform: rotate(33deg);
+        color:rgb(0, 255, 10);
+      }
+      .bg6{
+        top: 124%;
+        left: 6%;
+        transform: rotateX(12deg);
+        -webkit-transform: rotate(-19deg);
+        color: rgb(253, 144, 71);
+      }
+      .bg7{
+        top: 184%;
+        left: 12%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(19deg);
+        color: rgb(179, 12, 12);
+      }
+      .bg8{
+        top: 188%;
+        right: 15%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(161, 252, 219);
+      }
+      .bg9{
+        top: 225%;
+        left: 10%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(166, 133, 250);
+      }
+      .bg10{
+        top: 240%;
+        right: 20%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(32deg);
+        color: rgb(0, 255, 163);
+      }
+      .bg11{
+        top: 290%;
+        left: 10%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(71, 129, 175);
+      }
+      .bg12{
+        top: 300%;
+        right: 15%;
+        transform: rotateX(22deg);
+        -webkit-transform: rotate(22deg);
+        color: rgb(250, 217, 112);
+      }
+
+    }
+
+    @media only screen and (max-width: 767px) {
+      body{
+        margin: 0px;
+      }
+      #menu{
+        padding: 40px 0 60px;
+        width: 100%;
+        overflow: visible;
+      }
+      #menu li{
+        font-family: "Lucida Grande","segoe UI","ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN",Meiryo,Arial,sans-serif;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding-top: 33px;
+        margin: 0 10px 200px;
+        color: #fff;
+        font-weight: 800;
+        font-size: 20px;
+      }
+      #menu li#to_action{
+        background-color: #FCC24C;
+        margin: 100px -30px 0 0;
+      }
+      #menu li#to_member{
+        background-color: #5ADD97;
+        margin: 100px 0px 0 -30px;
+      }
+      .c_text {
+        padding: 40px 15px ;
+        color: #fff;
+        width: 100%;
+        margin: 0 auto;
+        overflow: scroll;
+        }
+      .production {
+        width: 100%;
+        border: 2px solid #fff;
+        margin: 50px auto;
+        color: #FFF;
+        padding: 30px 20px;
+      }
+      .production img{
+        width: 80%;
+        height: auto;
+      }
+      .bg1,.bg2,.bg3,.bg4,.bg5,.bg6,.bg7,.bg8,.bg9,.bg10,.bg11,.bg12{
+        position: absolute;
+        font-size: 40px;
+        font-weight: 800;
+        z-index: 1;
+        color: #ddd;
+        -webkit-animation: opacity 5s infinite; /* Chrome, Safari, Opera */
+        animation: opacity 5s infinite;
+      }
+      .bg1{
+        top: 25%;
+        left: 16%;
+        transform: rotateX(-20deg);
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        color: #302D2D;
+      }
+      .bg2{
+        top: 49%;
+        right: 12%;
+        transform: rotateX(40deg);
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-50deg);
+        color: rgb(59, 59, 245);
+      }
+      .bg3{
+        top: 109%;
+        right: 9%;
+        transform: rotateX(20deg);
+        -webkit-transform: rotate(20deg);
+        color: aqua;
+      }
+      .bg4{
+        top: 98%;
+        left: 20%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(248, 61, 61);
+      }
+      .bg5{
+        top: 170%;
+        right: 5%;
+        transform: rotateX(33deg);
+        -webkit-transform: rotate(33deg);
+        color:rgb(0, 255, 10);
+      }
+      .bg6{
+        top: 142%;
+        left: 3%;
+        transform: rotateX(12deg);
+        -webkit-transform: rotate(-19deg);
+        color: rgb(253, 144, 71);
+      }
+      .bg7{
+        top: 228%;
+        left: 3%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(19deg);
+        color: rgb(179, 12, 12);
+      }
+      .bg8{
+        top: 224%;
+        right: 15%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(161, 252, 219);
+      }
+      .bg9{
+        top: 328%;
+        left: 10%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(166, 133, 250);
+      }
+      .bg10{
+        top: 295%;
+        right: 2%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(32deg);
+        color: rgb(0, 255, 163);
+      }
+      .bg11{
+        top: 385%;
+        left: 10%;
+        transform: rotateX(-12deg);
+        -webkit-transform: rotate(-12deg);
+        color: rgb(71, 129, 175);
+      }
+      .bg12{
+        top: 395%;
+        right: 15%;
+        transform: rotateX(22deg);
+        -webkit-transform: rotate(22deg);
+        color: rgb(250, 217, 112);
+      }
+
+
+      h1{
+        font-family: "Lucida Grande", "segoe UI", "ヒラギノ丸ゴ Pro W4","Hiragino Maru Gothic Pro","ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+        font-size:20px;
+        font-weight:800;
+        line-height: 29px;
+      }
+      p{
+        font-size: 15px;
+        line-height: 24px;
+        font-weight:600;
+      }
+      .c_p3 a{
+        font-size: 18px;
+        font-weight: 800;
+        color: #FDBC4D;
+      }
+      #hero{
+        height: 550px;
+        background: #1abc9c; }
+      }
+      ul.slides li {
+        width: 50%;
+      }
+
+      }
+    ul.slides li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative; }
+      ul.slides li a:hover .d-hover {
+        display: block; }
+      ul.slides li a img {
+        width: 100%; }
+      ul.slides li a p {
+        display: none; }
+/* =========================
+
+			FOOTER
+
+   =========================*/
+#networks {
+	width: 100%;
+	height: 100%;
+	padding-top: 10px;
+  padding-bottom:70px;
+  margin-bottom: -200px;
+}
+
+#networks i {
+	font-size: 60px;
+	color: white;
+	padding: 18px;
+}
+
+#networks .dribbble:hover {
+	color: #ed6297;
+}
+
+#networks .facebook:hover {
+	color: #3b5998;
+}
+
+#networks .twitter:hover {
+	color: #2094CA;
+}
+
+#networks .mail:hover {
+	color: #f39c12;
+}
+
+
+
+#title1 {
+  /*font-family: "ヒラギノ丸ゴ ProN W4";*/
+  font-size: 60px;
+  margin: 80px 0;
+  font-weight: 800;
+  color: #FBBA5F;
+  text-shadow: 1px 1px 1px #fff,1px -1px 1px #fff,-1px -1px 1px #fff,0 1px 1px #fff;
+}
+#title1 li{
+  list-style: none;
+}
+
+.c_p1{
+  padding: 20px 15px 10px;
+}
+.c_p2{
+  padding: 20px 15px 100px;
+}
+.c_p3{
+  padding: 20px 15px 60px;
+}
+
+.i_m{
+  margin: 0 0 0 28px;
+  padding: 20px 0 100px 0;
+}
+
+#to_action,#to_aim,#to_member{
+  display: block;
+  cursor: pointer;
+}
+
+#wrapper{
+  display:none;
+}
+
+
+
+#aim{
+  display: none;
+  background-color: #FB7156;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  overflow: scroll;
+}
+#action{
+  display: none;
+  background-color: #FCC24C;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: #888;
+  z-index: 999;
+  overflow: scroll;
+}
+#member{
+  display: none;
+  background-color: #5ADD97;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  color: #888;
+  z-index: 999;
+  padding: 20px;
+  font-size: 15px;
+}
+
+#aim h2,
+#action h2,
+#member h2{
+  font-family:"Lucida Grande","segoe UI","ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN",Meiryo,Arial,sans-serif;
+  color: #fff;
+}
+#aim h2{
+}
+#action h2{
+}
+#member h2{
+}
+
+#to_back1,
+#to_back2,
+#to_back3{
+  clear: both;
+  cursor: pointer;
+  width: 150px;
+  margin: 10px auto 70px;
+  border: solid 2px #FFF;
+  border-radius: 20px;
+  color: #FFF;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+}
+
+#to_back1{
+  background-color: #FB7156;
+}
+#to_back2{
+  background-color: #FCC24C;
+}
+#to_back3{
+  background-color: #5ADD97;
+}
+#to_back1:hover,
+#to_back2:hover,
+#to_back3:hover{
+  background-color: #fff;
+}
+#to_back1:hover{
+  color: #FB7156;
+}
+#to_back2:hover{
+  color: #FCC24C;
+}
+#to_back3:hover{
+  color: #5ADD97;
+}
+
+@-webkit-keyframes opacity
+{
+0% {opacity: 0;}
+50% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+/* Standard syntax */
+@keyframes opacity
+{
+0% {opacity: 0;}
+50% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+.c_p3 a:hover{
+  text-decoration: none;
+}

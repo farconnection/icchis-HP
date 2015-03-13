@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<title>Icchi's Spacea｜いっちのスペーシア</title>
+		<meta name="description" content="フロントエンドエンジニアいっちによるポートフォリオサイトスペーシア。JavaScript、jQuery、HTML5、CSS3を用いたフロントエンドの実装やWEBデザイン、Angular.js,Ruby on Railsなどのバックエンドをしてるよ。市來晟弥" />
+		<meta name="keywords" content="フロントエンドエンジニア,いっち,ポートフォリオ,JavaScript,jQuery,HTML5,CSS3,フロントエンド,WEBデザイン,Angular.js,Ruby on Rails,市來晟弥" />
+		<meta name="author" content="いっち,市來晟弥" />
+		<link rel="shortcut icon" href="../favicon.ico">
+
+		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script> -->
+
+		<!-- <link href='http://fonts.googleapis.com/css?family=Audiowide&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/icons.css" /> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+		<script src="js/jquery-1.8.2.min.js"></script>
+
+
+		<!--[if lt IE 9]>
+		<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-50294492-1', 'fc2.com');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<style>
+		*{
+			font-size: 20px;
+			font-family: "ヒラギノ明朝 Pro","Hiragino Mincho Pro";
+		}
+		body{
+		/*	width: 1060px;
+			height: 750px;
+			overflow: hidden;*/
+		}
+		#main{
+			zoom:98%;
+			margin: 0 auto;
+			/*background: #ddF;*/
+			width: 1060px;
+			height: 750px;
+			overflow: hidden;
+		}
+		h1{
+			font-family: "ヒラギノ明朝 Pro","Hiragino Mincho Pro";
+			position: absolute;
+			top:7%;
+			right:15%;
+			writing-mode: tb-rl; /* IE独自仕様 */
+			writing-mode: vertical-rl;
+			-moz-writing-mode: vertical-rl;
+			-o-writing-mode: vertical-rl;
+			-webkit-writing-mode: vertical-rl;
+			font-size: 35px;
+		}
+		h2{
+			font-family: "ヒラギノ明朝 Pro","Hiragino Mincho Pro";
+			position: absolute;
+			top:45%;
+			right:16.5%;
+			font-size: 21px;
+		}
+		article{
+			width: 100%;
+			height: auto;
+			padding: 50px;
+			margin-right: 137px;
+			/*background: #ddd;*/
+			/*padding: 50px;*/
+			/*text-align: right;*/
+			float: right;
+			writing-mode: tb-rl; /* IE独自仕様 */
+			writing-mode: vertical-rl;
+			-moz-writing-mode: vertical-rl;
+			-o-writing-mode: vertical-rl;
+			-webkit-writing-mode: vertical-rl;
+		}
+		p{
+			width: 30px;
+			margin:0px 43px !important;
+		}
+		table{
+			position: absolute;
+			top: 35%;
+			left: 39%;
+			/*background: #Fdd;*/
+			border-collapse: collapse;
+			-moz-transform: rotate(90deg);
+			-webkit-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+		}
+		th{
+			width: 30px;
+			height:30px;
+		}
+		td{
+			height:70px;
+			width: 200px;
+		}
+		td,th {
+			border: solid 1px #000;
+			/*padding: 0.5em;*/
+			writing-mode: tb-rl; /* IE独自仕様 */
+			writing-mode: vertical-rl;
+			-moz-writing-mode: vertical-rl;
+			-o-writing-mode: vertical-rl;
+			-webkit-writing-mode: vertical-rl;
+		}
+		span{
+			border-right: 1px solid #000;
+		}
+		@media print {
+			* html body{
+			        /*zoom:68%;*/
+			}
+			*{
+			font-size: 20px;
+			font-family: "ヒラギノ明朝 Pro","Hiragino Mincho Pro";
+			}
+			body{
+			/*	width: 1060px;
+				height: 750px;
+				overflow: hidden;*/
+			}
+			#main{
+				margin: 0 auto;
+				/*background: #ddF;*/
+				width: 1060px;
+				height: 750px;
+				overflow: hidden;
+			}
+			h1{
+				font-family: "ヒラギノ明朝 Pro","Hiragino Mincho Pro";
+				position: absolute;
+				top:7%;
+				right:15%;
+				writing-mode: tb-rl; /* IE独自仕様 */
+				writing-mode: vertical-rl;
+				-moz-writing-mode: vertical-rl;
+				-o-writing-mode: vertical-rl;
+				-webkit-writing-mode: vertical-rl;
+				font-size: 35px;
+			}
+			h2{
+				font-family: "ヒラギノ明朝 Pro","Hiragino Mincho Pro";
+				position: absolute;
+				top:45%;
+				right:16.5%;
+				font-size: 21px;
+			}
+			article{
+				width: 100%;
+				height: auto;
+				padding: 50px;
+				margin-right: 137px;
+				/*background: #ddd;*/
+				/*padding: 50px;*/
+				/*text-align: right;*/
+				float: right;
+				writing-mode: tb-rl; /* IE独自仕様 */
+				writing-mode: vertical-rl;
+				-moz-writing-mode: vertical-rl;
+				-o-writing-mode: vertical-rl;
+				-webkit-writing-mode: vertical-rl;
+			}
+			p{
+				width: 30px;
+				margin:0px 43px !important;
+			}
+			table{
+				position: absolute;
+				top: 35%;
+				left: 39%;
+				/*background: #Fdd;*/
+				border-collapse: collapse;
+				-moz-transform: rotate(90deg);
+				-webkit-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+			}
+			th{
+				width: 30px;
+				height:30px;
+			}
+			td{
+				height:70px;
+				width: 200px;
+			}
+			td,th {
+				border: solid 1px #000;
+				/*padding: 0.5em;*/
+				writing-mode: tb-rl; /* IE独自仕様 */
+				writing-mode: vertical-rl;
+				-moz-writing-mode: vertical-rl;
+				-o-writing-mode: vertical-rl;
+				-webkit-writing-mode: vertical-rl;
+			}
+			span{
+				border-right: 1px solid #000;
+			}
+		}
+
+		</style>
+
+	</head>
+	<body>
+	<div id="main">
+	<article>
+	<h1>漢字テスト</h1>
+	<h2>クラス&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名前</h2>
+	    <p>①部下の<span>チョウカイ</span>処分をする。</p>
+	    <p><span>カンタン</span>をくだく。</p>
+		<p>③書物を<span>ヒケン</span>する。</p>
+		<p>④<span>ガハク</span>の個展にいく。</p>
+		<p>⑤<span>センパク</span>を操縦する。</p>
+		<p>⑥<span>ユウレイ</span>を目にする。</p>
+		<p>⑦傷口を<span>セイジョウ</span>する。</p>
+		<p>⑧ホルモンの<span>ブンピツ</span>。</p>
+		<p>⑨<span>カタキ</span>を<span>ウツ</span>。</p>
+		<p>⑩<span>ワザワイ</span>を避ける。</p>
+	</article>
+	<table>
+	  <tr>
+	    <th>①</th>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <th>②</th>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <th>③</th>
+	    <td></td>
+	  </tr>
+  	  <tr>
+	    <th>④</th>
+	    <td></td>
+	  </tr>
+  	  <tr>
+	    <th>⑤</th>
+	    <td></td>
+	  </tr>
+  	  <tr>
+	    <th>⑥</th>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <th>⑦</th>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <th>⑧</th>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <th>⑨</th>
+	    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;を&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <th>⑩</th>
+	    <td>
+	    </td>
+	  </tr>
+	</table>
+<!-- 	<textarea name="MSG" cols=40 rows=4>
+	あいうえお
+	</textarea> -->
+	</div>
+
+	<script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+.bt-menu-trigger {
+	position: fixed;
+	top: 10px;
+	left: 20px;
+	z-index: 100;
+	display: block;
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+}
